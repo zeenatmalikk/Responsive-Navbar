@@ -1,0 +1,47 @@
+.nav-bar{
+    background-color: darkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.logo-nav{
+    color: #fff;
+}
+.navmenu{
+    display: flex;
+    list-style: none;
+    justify-content: end;
+    width: 80%;
+}
+.menuicon{
+    display: none;
+}
+
+@media screen and (max-width:968px) {
+    .nav-bar{
+        height: 80px;
+    }
+    .navmenu{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        background-color: darkcyan;
+        width: 93%;
+        left: -105%;
+        transition: all 0.5s ease;
+    }
+    .navmenu.mobile{
+        left: 0;
+        transition: all 0.5s ease;
+    }
+    .menuicon{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 100%);
+        
+    }
+}
